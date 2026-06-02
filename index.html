@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SSCCARIOT COMUNICAÇÃO VISUAL</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0a0a0a;
+color:white;
+overflow-x:hidden;
+}
+
+/* FUNDO TECNOLÓGICO */
+
+.tech-bg{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+background:
+linear-gradient(rgba(0,0,0,0.80),rgba(0,0,0,0.85)),
+url("https://i.postimg.cc/ZRVmC1Qt/IMG-3089.jpg");
+background-size:cover;
+background-position:center;
+animation:bgMove 30s ease-in-out infinite alternate;
+}
+
+@keyframes bgMove{
+0%{transform:scale(1);}
+100%{transform:scale(1.1);}
+}
+
+/* HEADER */
+
+header{
+padding:30px;
+text-align:center;
+background:transparent;
+}
+
+.logo{
+width:320px;
+margin-bottom:10px;
+}
+
+header h1{
+font-size:36px;
+color:#ff8c00;
+text-shadow:0 0 10px rgba(0,0,0,0.7);
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url("");
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h2{
+font-size:42px;
+color:#ffb000;
+text-shadow:0 0 15px rgba(0,0,0,0.9);
+margin-bottom:20px;
+}
+
+.hero p{
+margin-top:20px;
+font-size:22px;
+text-shadow:
+0 0 10px rgba(0,0,0,0.8),
+0 0 20px rgba(0,0,0,0.8);
+}
+
+section{
+padding:100px 10%;
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+color:#ff8c00;
+font-size:34px;
+}
+
+/* SERVIÇOS */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:30px;
+}
+
+.card{
+background:#1c1c1c;
+padding:30px;
+border-radius:10px;
+text-align:center;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#ff6a00;
+}
+
+/* MÁQUINAS */
+
+.machines{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.machines img{
+width:100%;
+border-radius:10px;
+transition:0.3s;
+cursor:pointer;
+image-rendering:auto;
+}
+
+.machines img:hover{
+transform:scale(1.05);
+}
+
+/* GALERIA */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.gallery-item{
+text-align:center;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+image-rendering:auto;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.gallery p{
+margin-top:10px;
+font-size:16px;
+color:#ccc;
+}
+
+/* LIGHTBOX */
+
+#lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+
+#lightbox img{
+max-width:90%;
+max-height:90%;
+}
+
+/* CTA */
+
+.cta{
+background:
+linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),
+url("https://images.unsplash.com/photo-1581092918056-0c4c3acd3789")
+center/cover;
+padding:120px 20px;
+text-align:center;
+}
+
+.cta h2{
+font-size:42px;
+margin-bottom:20px;
+color:#ff8c00;
+}
+
+.cta p{
+font-size:20px;
+margin-bottom:35px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.btn-whatsapp{
+background:#25D366;
+color:white;
+padding:18px 45px;
+font-size:20px;
+font-weight:bold;
+border-radius:8px;
+text-decoration:none;
+display:inline-block;
+transition:0.3s;
+}
+
+.btn-whatsapp:hover{
+transform:scale(1.08);
+}
+
+/* WHATSAPP */
+
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.5);
+z-index:999;
+}
+
+.whatsapp-float img{
+width:35px;
+}
+
+.instagram-float{
+position:fixed;
+bottom:100px;
+right:25px;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.5);
+z-index:998;
+}
+
+.instagram-float img{
+width:40px;
+height:40px;
+}
+
+/* FOOTER */
+
+footer{
+background:#000;
+text-align:center;
+padding:30px;
+color:#aaa;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="tech-bg"></div>
+
+<header>
+
+<img class="logo" src="https://i.postimg.cc/5tY7gV8n/3932B3FD-16E1-42E1-ADDC-1E0F62009E2E.png">
+
+<h1></h1>
+
+</header>
+
+<section class="hero">
+<h2>Comunicação Visual Profissional</h2>
+
+<p>
+Mais de 20 anos produzindo fachadas, ACM, adesivos, lonas, outdoors e impressão digital.
+</p>
+
+
+
+</section>
+
+<section>
+
+<h2>Sobre a Empresa</h2>
+
+<p style="max-width:800px;margin:auto;text-align:center">
+A Sscariot Comunicação Visual possui mais de 20 anos de experiência no mercado, oferecendo soluções completas em comunicação visual e impressão digital. Trabalhamos com máquinas de impressão de última geração, garantindo alta definição, cores vibrantes e acabamento profissional em cada projeto. Nosso compromisso é transformar ideias em resultados visuais de alto impacto, sempre com qualidade, tecnologia e confiança.
+</p>
+
+</section>
+
+<section>
+
+<h2>Nossos Serviços</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Lonas</h3>
+<p>Impressão de lonas em grande formato.</p>
+</div>
+
+<div class="card">
+<h3>Adesivos</h3>
+<p>Adesivos personalizados e recorte eletrônico.</p>
+</div>
+
+<div class="card">
+<h3>ACM</h3>
+<p>Fachadas modernas em ACM.</p>
+</div>
+
+<div class="card">
+<h3>PVC</h3>
+<p>Placas rígidas para comunicação visual.</p>
+</div>
+
+<div class="card">
+<h3>Outdoor</h3>
+<p>Produção e instalação de outdoors.</p>
+</div>
+
+</div>
+
+
+
+</section>
+<section>
+
+<h2>Galeria de Trabalhos</h2>
+
+<div class="gallery">
+
+<div class="gallery-item">
+<img src="https://i.postimg.cc/V6Vb8b41/0185f1a7-367e-45b3-8d37-41a49d3fec89.jpg">
+<p>Projeto Antônio do Amaral</p>
+</div>
+
+<div class="gallery-item">
+<img src="https://i.postimg.cc/KzHg2gQG/91084935-255b-4fc8-92de-6884f6f90134.jpg">
+<p>Projeto Emagrecentro</p>
+</div>
+
+<div class="gallery-item">
+<img src="https://i.postimg.cc/C1QfgfJM/e9e241b6-3193-4a10-92a2-8b26c7d57c91.jpg">
+<p>Projeto Sicoob</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>Solicite Seu Orçamento</h2>
+
+<p>
+Entre em contato agora e receba um orçamento rápido
+para projetos de comunicação visual e impressão digital.
+</p>
+
+<a class="btn-whatsapp"
+href="https://wa.me/13997306132"
+target="_blank">
+
+FALAR NO WHATSAPP
+
+</a>
+
+</section>
+
+<footer>
+SSCariot Comunicação Visual © 2026
+</footer>
+
+<a class="whatsapp-float"
+href="https://wa.me/13997306132"
+target="_blank">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+
+</a>
+  
+<a class="instagram-float"
+href="https://www.instagram.com/sscariot.cv?igsh=c2htdGZ3c244ZjFy"
+target="_blank"
+title="Conheça nosso Instagram">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+
+</a>
+
+<div id="lightbox">
+<img src="">
+</div>
+
+<script>
+
+const sections=document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+
+sections.forEach(sec=>{
+
+const top=sec.getBoundingClientRect().top;
+
+if(top<window.innerHeight-100){
+sec.classList.add("show");
+}
+
+});
+
+});
+
+const images=document.querySelectorAll(".gallery img, .machines img");
+const lightbox=document.getElementById("lightbox");
+const lightImg=lightbox.querySelector("img");
+
+images.forEach(img=>{
+
+img.addEventListener("click",()=>{
+
+lightbox.style.display="flex";
+lightImg.src=img.src;
+
+});
+
+});
+
+lightbox.addEventListener("click",()=>{
+lightbox.style.display="none";
+});
+
+</script>
+  <!-- BOTÃO IA -->
+
+<div id="ai-button">🤖</div>
+
+<div id="ai-chat">
+<iframe 
+src="https://cdn.botpress.cloud/webchat/v3.6/shareable.html?configUrl=https://files.bpcontent.cloud/2026/03/06/04/20260306040339-NI8T281T.json">
+</iframe>
+</div>
+
+<style>
+
+#ai-button{
+position:fixed;
+bottom:175px;
+right:25px;
+width:60px;
+height:60px;
+background:#ff8c00;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+cursor:pointer;
+box-shadow:0 5px 20px rgba(0,0,0,0.5);
+z-index:9999;
+}
+
+#ai-chat{
+position:fixed;
+bottom:170px;
+right:25px;
+width:380px;
+height:600px;
+display:none;
+z-index:9999;
+box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+#ai-chat iframe{
+width:100%;
+height:100%;
+border:none;
+border-radius:10px;
+}
+
+/* AJUSTE PARA CELULAR */
+
+@media (max-width:600px){
+
+#ai-chat{
+right:10px;
+left:10px;
+width:auto;
+height:70vh;
+bottom:120px;
+}
+
+}
+
+</style>
+
+<script>
+
+const aiButton = document.getElementById("ai-button");
+const aiChat = document.getElementById("ai-chat");
+
+aiButton.onclick = () => {
+
+if(aiChat.style.display === "block"){
+aiChat.style.display = "none";
+}else{
+aiChat.style.display = "block";
+}
+
+}
+
+</script>
